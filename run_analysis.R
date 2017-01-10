@@ -60,4 +60,4 @@ mydata <- mydata[,-2]
 #group_by subject and activity and summarise using mean
 mydata_means <- mydata %>% group_by(Subject,Activity) %>% summarise_each(funs(mean))
 #Write the data in to the tidy data.txt file
-write.table(mydata_means, "tidy_data.txt")
+write.table(mydata_means, "tidy_data.txt", row.names=FALSE)
